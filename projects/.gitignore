@@ -1,5 +1,6 @@
-x64
-*.sln
+CMakeFiles
 [R/r]elease
 *.dir
-CMakeFiles
+x64
+.idea
+[D/d]ebug
