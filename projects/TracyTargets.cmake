@@ -47,10 +47,10 @@ unset(_cmake_expected_targets)
 
 
 # Create imported target Tracy::TracyClient
-add_library(Tracy::TracyClient STATIC IMPORTED)
+add_library(Tracy::TracyClient SHARED IMPORTED)
 
 set_target_properties(Tracy::TracyClient PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "TRACY_ENABLE"
+  INTERFACE_COMPILE_DEFINITIONS "TRACY_ENABLE;TRACY_IMPORTS"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/public"
   INTERFACE_LINK_LIBRARIES "Threads::Threads"
@@ -59,29 +59,15 @@ set_target_properties(Tracy::TracyClient PROPERTIES
 # Import target "Tracy::TracyClient" for configuration "Debug"
 set_property(TARGET Tracy::TracyClient APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(Tracy::TracyClient PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/Debug/TracyClient.lib"
+  IMPORTED_IMPLIB_DEBUG "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/Debug/TracyClient.lib"
+  IMPORTED_LOCATION_DEBUG "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/Debug/TracyClient.dll"
   )
 
 # Import target "Tracy::TracyClient" for configuration "Release"
 set_property(TARGET Tracy::TracyClient APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Tracy::TracyClient PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/Release/TracyClient.lib"
-  )
-
-# Import target "Tracy::TracyClient" for configuration "MinSizeRel"
-set_property(TARGET Tracy::TracyClient APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
-set_target_properties(Tracy::TracyClient PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
-  IMPORTED_LOCATION_MINSIZEREL "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/MinSizeRel/TracyClient.lib"
-  )
-
-# Import target "Tracy::TracyClient" for configuration "RelWithDebInfo"
-set_property(TARGET Tracy::TracyClient APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
-set_target_properties(Tracy::TracyClient PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
-  IMPORTED_LOCATION_RELWITHDEBINFO "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/RelWithDebInfo/TracyClient.lib"
+  IMPORTED_IMPLIB_RELEASE "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/Release/TracyClient.lib"
+  IMPORTED_LOCATION_RELEASE "E:/Jingwen/ArisenEngine/Engine/Arisen/3rdparty/tracy/projects/Release/TracyClient.dll"
   )
 
 # This file does not depend on other imported targets which have

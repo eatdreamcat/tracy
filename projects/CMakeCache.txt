@@ -14,13 +14,14 @@
 # EXTERNAL cache entries
 ########################
 
+//No help, variable specified on the command line.
+BUILD_SHARED_LIBS:UNINITIALIZED=ON
+
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lib.exe
 
-//Semicolon separated list of supported configuration types, only
-// supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
-// else will be ignored.
-CMAKE_CONFIGURATION_TYPES:STRING=Debug;Release;MinSizeRel;RelWithDebInfo
+//No help, variable specified on the command line.
+CMAKE_CONFIGURATION_TYPES:UNINITIALIZED=Debug;Release
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3 /GR /EHsc
@@ -95,7 +96,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Tracy
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/Tracy
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -323,7 +324,7 @@ TRACY_ON_DEMAND:BOOL=OFF
 TRACY_PATCHABLE_NOPSLEDS:BOOL=OFF
 
 //Whether to build Tracy as a static library
-TRACY_STATIC:BOOL=ON
+TRACY_STATIC:BOOL=OFF
 
 //Instead of full runtime symbol resolution, only resolve the image
 // path and offset to enable offline symbol resolution
@@ -396,7 +397,7 @@ CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community
 //Name of generator platform.
-CMAKE_GENERATOR_PLATFORM:INTERNAL=
+CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Test CMAKE_HAVE_LIBC_PTHREAD
@@ -508,5 +509,5 @@ TRACY_DEMANGLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: TRACY_VERBOSE
 TRACY_VERBOSE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/Tracy
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files/Tracy
 
