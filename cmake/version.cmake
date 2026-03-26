@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-message("Parsing public/common/TracyVersion.hpp file")
+message(STATUS "Parsing public/common/TracyVersion.hpp file")
 
 file(READ "${CMAKE_CURRENT_LIST_DIR}/../public/common/TracyVersion.hpp" version)
 
@@ -21,4 +21,4 @@ set(TRACY_VERSION_PATCH ${CMAKE_MATCH_1})
 
 set(TRACY_VERSION_STRING "${TRACY_VERSION_MAJOR}.${TRACY_VERSION_MINOR}.${TRACY_VERSION_PATCH}")
 
-message("VERSION ${TRACY_VERSION_STRING}")
+message(STATUS "VERSION ${TRACY_VERSION_STRING}")
